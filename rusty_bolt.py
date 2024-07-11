@@ -33,7 +33,7 @@ if arquivo is not None:
 
     # Opções avançadas de escolha
     st.sidebar.title('Ampliar imagem:')
-    tam_pixels = st.sidebar.slider('Tamanho da imagem [pixels]:', min_value=150, max_value=500, value=210)
+    tam_pixels = st.sidebar.slider('Tamanho da imagem [pixels]:', min_value=150, max_value=500, value=rows)
     # redimensionando a imagem para X pixels e mantendo o aspect ratio
     file_bytes = np.asarray(bytearray(arquivo.read()), dtype=np.uint8)
     image_decoded = cv.imdecode(file_bytes, cv.IMREAD_ANYCOLOR)
